@@ -61,10 +61,9 @@ public class CharacterMovement : MonoBehaviour
         #endregion
 
         #region Movement
-        Vector3 actualMovement = new Vector3(_move.x, 0, _move.y);
 
         if (rb.velocity.magnitude < movementSpeedCap)
-            rb.velocity += actualMovement * Time.deltaTime * speed;
+            rb.velocity += (transform.forward * _move.y * speed * Time.deltaTime) + (transform.right * _move.x * speed * Time.deltaTime);
         #endregion
 
         transform.rotation = Quaternion.Euler(0, followTransform.transform.rotation.eulerAngles.y, 0);
