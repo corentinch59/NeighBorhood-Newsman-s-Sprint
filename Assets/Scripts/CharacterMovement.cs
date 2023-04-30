@@ -19,6 +19,7 @@ public class CharacterMovement : MonoBehaviour
     private PlayerInput playercontrols;
     private Rigidbody rb;
     private CharacterController characterController;
+    public Animator animator;
 
     public Vector3 velocity;
     private Vector2 _move;
@@ -31,6 +32,7 @@ public class CharacterMovement : MonoBehaviour
     public void onMove(InputAction.CallbackContext ctx)
     {
         _move = ctx.ReadValue<Vector2>();
+        animator.SetFloat("Trust", _move.y);
     }
 
     public void onLook(InputAction.CallbackContext ctx)
@@ -65,6 +67,9 @@ public class CharacterMovement : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded){
             velocity.y = 10;
         }
+        animator.SetFloat("Speed", velocity.magnitude);
+        //set animation playing speed
+        animator.speed = velocity.magnitude/40;
         characterController.Move((velocity.z*transform.forward+velocity.x*transform.right+velocity.y*Vector3.up) * deltaTime);
 
       
