@@ -1,0 +1,24 @@
+# Blender MTL File: 'assets.blend'
+# Material Count: 2
+
+newmtl Grass.003
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.036460 0.207915 0.013085
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd _Textures\\grass.jpg
+
+newmtl Roof
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.106534 0.008580 0.003413
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd _Textures\\brown.jpg
