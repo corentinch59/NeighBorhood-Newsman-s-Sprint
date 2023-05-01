@@ -1,19 +1,9 @@
 fileFormatVersion: 2
-guid: cc9ee6bc701fa8347ab869ed2b20bd1b
+guid: a038b38c090812a4eb8b8a3051e5c71e
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Road.001
-    second: {fileID: 2100000, guid: 6d89def689572824399f904e9b23fde4, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Sidewalk.001
-    second: {fileID: 2100000, guid: e15d781ea3aba4247bf9d5dc0447e6b1, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -47,7 +37,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
