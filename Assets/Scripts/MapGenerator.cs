@@ -8,7 +8,7 @@ public class MapGenerator : MonoBehaviour
     [SerializeField] private GameObject crossRoadPrefab;
     [SerializeField] private int gridWidth;
     [SerializeField] private int gridHeight;//TODO remove if only square maps are needed
-    private int gridSize =30;
+    private int gridSize =60;
 
     private int[,] grid; 
 
@@ -30,12 +30,12 @@ public class MapGenerator : MonoBehaviour
                 for (int j = 0; j < gridHeight; j++){
                     if (grid[i, j] == 1) continue;
                     GameObject buildingPrefab = buildingsList[Random.Range(0, buildingsList.Count)];
-                    Building buildingScript = buildingPrefab.GetComponent<Building>();
+                    // Building buildingScript = buildingPrefab.GetComponent<Building>();
                     GameObject newObj = Instantiate(buildingPrefab, new Vector3(xOffset, 0, zOffset), Quaternion.identity);
                     newObj.transform.Rotate(0, 90 * Random.Range(0, 4), 0);
-                    for (int x = 0; x < buildingScript.Size.x; x++){ for (int y = 0; y < buildingScript.Size.y; y++){
-                        grid[i + x, j + y] = 1;
-                    }}
+                    // for (int x = 0; x < buildingScript.Size.x; x++){ for (int y = 0; y < buildingScript.Size.y; y++){
+                        grid[i + 0, j + 0] = 1;
+                    // }}
                     zOffset += gridSize;
                 }
                 xOffset += gridSize;
@@ -49,19 +49,21 @@ public class MapGenerator : MonoBehaviour
             //? cross roads
             for (int i = -gridSize/2; i <= gridWidth*gridSize; i += gridSize){
                 for (int j = -gridSize/2; j <= gridHeight*gridSize; j += gridSize){
-                    Instantiate(crossRoadPrefab, new Vector3(i, 0, j), Quaternion.identity);
+                    Instantiate(crossRoadPrefab, new Vector3(i, 0, j), Quaternion.identity).transform.localScale = new Vector3(2, 1, 2);
+
                 }
             }
             //? line roads horizontal
             for (int i = 0; i < gridWidth*gridSize; i += gridSize){
                 for (int j = -gridSize/2; j <= gridHeight*gridSize; j += gridSize){
-                    Instantiate(roadPrefab, new Vector3(i, 0, j), Quaternion.identity);
+                    Instantiate(roadPrefab, new Vector3(i, 0, j), Quaternion.identity).transform.localScale = new Vector3(2, 1, 2);
                 }
             }
             //? line roads vertical
             for (int i = -gridSize/2; i <= gridWidth*gridSize; i += gridSize) {
                 for (int j = 0; j < gridHeight*gridSize; j += gridSize){
                     GameObject newObj = Instantiate(roadPrefab, new Vector3(i , 0, j ), Quaternion.identity);
+                    newObj.transform.localScale = new Vector3(2, 1, 2);
                     newObj.transform.Rotate(0, 90, 0);
                 }
             }

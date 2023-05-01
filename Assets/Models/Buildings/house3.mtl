@@ -1,0 +1,112 @@
+# Blender MTL File: 'assets.blend'
+# Material Count: 10
+
+newmtl Door.012
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.114935 0.023925 0.010078
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\Shadow\\Documents\\GitHub\\NeighBorhood-Newsman-s-Sprint\\Assets\\Models\\_Textures\\brown.jpg
+
+newmtl Door.014
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.114935 0.023925 0.010078
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\Shadow\\Documents\\GitHub\\NeighBorhood-Newsman-s-Sprint\\Assets\\Models\\_Textures\\brown.jpg
+
+newmtl Grass.019
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.036460 0.207915 0.013085
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\Shadow\\Documents\\GitHub\\NeighBorhood-Newsman-s-Sprint\\Assets\\Models\\_Textures\\grass.jpg
+
+newmtl Grass.020
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.036460 0.207915 0.013085
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\Shadow\\Documents\\GitHub\\NeighBorhood-Newsman-s-Sprint\\Assets\\Models\\_Textures\\grass.jpg
+
+newmtl Grass.021
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.036460 0.207915 0.013085
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\Shadow\\Documents\\GitHub\\NeighBorhood-Newsman-s-Sprint\\Assets\\Models\\_Textures\\grass.jpg
+
+newmtl Material.071
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\Shadow\\Documents\\GitHub\\NeighBorhood-Newsman-s-Sprint\\Assets\\Models\\_Textures\\Untitled.042.png
+
+newmtl MetalDoor.007
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.114935 0.023925 0.010078
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\Shadow\\Documents\\GitHub\\NeighBorhood-Newsman-s-Sprint\\Assets\\Models\\_Textures\\gray.jpg
+
+newmtl Roof.010
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.106534 0.008580 0.003413
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\Shadow\\Documents\\GitHub\\NeighBorhood-Newsman-s-Sprint\\Assets\\Models\\_Textures\\brown.jpg
+
+newmtl Roof.011
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.106534 0.008580 0.003413
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\Shadow\\Documents\\GitHub\\NeighBorhood-Newsman-s-Sprint\\Assets\\Models\\_Textures\\brown.jpg
+
+newmtl Walls.008
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.659911 0.459657
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\Shadow\\Documents\\GitHub\\NeighBorhood-Newsman-s-Sprint\\Assets\\Models\\_Textures\\wall.jpg

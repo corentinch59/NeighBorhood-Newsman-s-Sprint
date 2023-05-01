@@ -9,6 +9,7 @@ public class CharacterAim : MonoBehaviour
     private PlayerInput playerinput;
     public GameObject mainCamera;
     public GameObject aimCamera;
+    public Animator anim;
 
     public void onAim(InputAction.CallbackContext ctx)
     {
@@ -16,11 +17,17 @@ public class CharacterAim : MonoBehaviour
         {
             mainCamera.SetActive(false);
             aimCamera.SetActive(true);
+            anim.SetBool("Throw", true);
+            Time.timeScale = 0.5f;
+
         }
         else
         {
             aimCamera.SetActive(false);
             mainCamera.SetActive(true);
+            anim.SetBool("Throw", false);
+            anim.speed = 5;
+            Time.timeScale = 1;
         }
     }
 

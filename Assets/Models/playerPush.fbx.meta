@@ -3,7 +3,62 @@ guid: 9c27c4c26a9b0fc42b7e178dcc593caa
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Boy01_Brows_MAT2.005
+    second: {fileID: 2100000, guid: d9042547d6ac14847be82b2be7f56119, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Boy01_Eyes_MAT2.005
+    second: {fileID: 2100000, guid: 179e50f0bb5ed3a4697643e22ed36aaf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.056
+    second: {fileID: 2100000, guid: ce8c3e239735fe3418f6b3d38b6273e9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.057
+    second: {fileID: 2100000, guid: 23ba439cdac777240b6b030e94a2e3e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.058
+    second: {fileID: 2100000, guid: 9a57e3f23c6ca4e409310516e42a3f66, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.059
+    second: {fileID: 2100000, guid: b76dc8e03b2783c49a3cf809bf6be94c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.060
+    second: {fileID: 2100000, guid: dd876af22f5e007448f72f83932ee2c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.061
+    second: {fileID: 2100000, guid: c5e14800bc9ea2540a4ebfb0929dbabe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.062
+    second: {fileID: 2100000, guid: dafae433e4301854196400bb13907d59, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.063
+    second: {fileID: 2100000, guid: 828bd805a045ee24384938f84578f4d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.064
+    second: {fileID: 2100000, guid: 861bbd473d9262e4fa2e03eebfed6f4e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -62,7 +117,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature.004|Armature.001|Armature|Armature.001|Armature|Armature.001|mixamo
+      name: Throw
       takeName: Armature.004|Armature.001|Armature|Armature.001|Armature|Armature.001|mixamo
       internalID: -1156049760711271576
       firstFrame: 0
@@ -73,7 +128,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -265,7 +320,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature.004|Armature.001|Armature|Armature.001|mixamo.com|Layer0.002
+      name: running
       takeName: Armature.004|Armature.001|Armature|Armature.001|mixamo.com|Layer0.002
       internalID: -4086371248158643518
       firstFrame: 0
@@ -323,18 +378,18 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature.004|Armature.001|Armature|Armature|mixamo.com|Layer0
-      takeName: Armature.004|Armature.001|Armature|Armature|mixamo.com|Layer0
+      name: throwing2
+      takeName: throwing2
       internalID: 6087766618336399745
       firstFrame: 0
-      lastFrame: 1
+      lastFrame: 29
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
