@@ -283,7 +283,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 1219123610}
   m_Follow: {fileID: 1219123610}
   m_Lens:
-    FieldOfView: 60.55399
+    FieldOfView: 60.72768
     OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
@@ -396,7 +396,7 @@ MonoBehaviour:
   m_ScreenY: 0.5
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
-  m_SoftZoneWidth: 0.350881
+  m_SoftZoneWidth: 0.3502166
   m_SoftZoneHeight: 0
   m_BiasX: 0
   m_BiasY: 0
@@ -541,8 +541,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Button
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 0}
-  m_sharedMaterial: {fileID: 0}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -592,7 +592,7 @@ MonoBehaviour:
   checkPaddingRequired: 0
   m_isRichText: 1
   m_parseCtrlCharacters: 1
-  m_isOrthographic: 0
+  m_isOrthographic: 1
   m_isCullingEnabled: 0
   m_horizontalMapping: 0
   m_verticalMapping: 0
@@ -709,7 +709,7 @@ PrefabInstance:
     - target: {fileID: 2942871769724454028, guid: 388421c1a61bac540b8a17910190465d,
         type: 3}
       propertyPath: buildingsList.Array.size
-      value: 6
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2942871769724454028, guid: 388421c1a61bac540b8a17910190465d,
         type: 3}
@@ -746,6 +746,24 @@ PrefabInstance:
       propertyPath: buildingsList.Array.data[5]
       value: 
       objectReference: {fileID: 919132149155446097, guid: bb08b5e1fcd191243be3348659fbb847,
+        type: 3}
+    - target: {fileID: 2942871769724454028, guid: 388421c1a61bac540b8a17910190465d,
+        type: 3}
+      propertyPath: buildingsList.Array.data[6]
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 7d50be76764bbed469585c13bc25b41f,
+        type: 3}
+    - target: {fileID: 2942871769724454028, guid: 388421c1a61bac540b8a17910190465d,
+        type: 3}
+      propertyPath: buildingsList.Array.data[7]
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 653dac90912889949a6dae06cd8eeadc,
+        type: 3}
+    - target: {fileID: 2942871769724454028, guid: 388421c1a61bac540b8a17910190465d,
+        type: 3}
+      propertyPath: buildingsList.Array.data[8]
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: cb5278b8c7bcae1459f827b89755b190,
         type: 3}
     - target: {fileID: 2942871769724454029, guid: 388421c1a61bac540b8a17910190465d,
         type: 3}
@@ -3289,7 +3307,7 @@ MonoBehaviour:
   acceleration: 10
   followTransform: {fileID: 1219123609}
   followTransformOffset: {x: 0, y: 0.631, z: 0}
-  menu: {fileID: 0}
+  menu: {fileID: 1256070529}
   animator: {fileID: 2011887144}
   skateAnimator: {fileID: 2070988387}
   vcam: {fileID: 48851711}
