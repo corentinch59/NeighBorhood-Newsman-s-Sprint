@@ -55,6 +55,20 @@ public class CharacterMovement : MonoBehaviour
         if(Mathf.Abs(followTransform.transform.localRotation.x+y) < 30) followTransform.transform.Rotate(-y, 0, 0);
     }
 
+    public void onJump(InputAction.CallbackContext ctx)
+    {
+        if(Time.time - lastGroundTime < 0.2f) velocity.y = 20;
+    }
+
+    public void onBoost(InputAction.CallbackContext ctx)
+    {
+        if (energy > 0)
+        {
+            velocity.z += 60;
+            energy -= 10;
+        }
+    }
+
     private void Awake()
     {
         playercontrols = GetComponent<PlayerInput>();
@@ -90,13 +104,7 @@ public class CharacterMovement : MonoBehaviour
         }
         if(!characterController.isGrounded) velocity -= Vector3.up * deceleration * 1f * deltaTime;
         // velocity = Vector3.ClampMagnitude(velocity, movementSpeedCap);
-        if(Input.GetKeyDown(KeyCode.Space) && Time.time - lastGroundTime < 0.2f){
-            velocity.y = 20;
-        }
-        if(Input.GetKeyDown(KeyCode.LeftShift) && energy > 0){
-            velocity.z += 60;
-            energy -= 10;
-        }
+
         animator.SetFloat("Speed", velocity.magnitude);
         //if animator is playing running and throwing is not getting played
         if(animator.GetCurrentAnimatorStateInfo(0).IsName("Running") && animator.GetCurrentAnimatorStateInfo(1).IsName("Throwing"))
