@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Cinemachine;
+using UnityEngine.UI;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -38,7 +39,14 @@ public class CharacterMovement : MonoBehaviour
     public float energy = 100.0f;
     public GameObject energyBar;
     public bool isPlaying = false;
-
+    public Vector3 startPosition;
+    public int score = 0;
+    //legacy text
+    public UnityEngine.UI.Text scoreUI;
+    public float startTime;
+    public UnityEngine.UI.Text timerUI;
+    public Slider mySlider;
+    private bool alreadyPlayed = false;
     public void onMove(InputAction.CallbackContext ctx)
     {
         if(!isPlaying) return;
@@ -50,8 +58,8 @@ public class CharacterMovement : MonoBehaviour
     {
         if(!isPlaying) return;
         _look = ctx.ReadValue<Vector2>();
-        float y = _look.y*deltaTime*cameraLookPower;
-        transform.Rotate(0, _look.x*deltaTime, 0);
+        float y = _look.y*deltaTime*cameraLookPower*1;//(Time.timeScale == 1 ? 1 : 0.7f)
+        transform.Rotate(0, _look.x*cameraLookPower*1*deltaTime, 0);
         if(Mathf.Abs(followTransform.transform.localRotation.x+y) < 30) followTransform.transform.Rotate(-y, 0, 0);
     }
 
@@ -62,9 +70,9 @@ public class CharacterMovement : MonoBehaviour
 
     public void onBoost(InputAction.CallbackContext ctx)
     {
-        if (energy > 0)
+        if (energy >= 10)
         {
-            velocity.z += 60;
+            velocity.z += 15;
             energy -= 10;
         }
     }
@@ -76,16 +84,41 @@ public class CharacterMovement : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         composer = vcam.GetComponentInChildren<CinemachineComposer>();
         skateAnimator.SetBool("Grounded",true);
-
+        startPosition = transform.position;
+        mySlider.onValueChanged.AddListener(OnSliderChanged);
     }
 
     public void OnPlay(){
         isPlaying = true;
         Cursor.lockState = CursorLockMode.Locked;
+        score = 0;
+        transform.position = startPosition;
+        menu.transform.Find("Win").gameObject.SetActive(false);
+        menu.transform.Find("Lose").gameObject.SetActive(false);
+        StartCoroutine(StartGame());
+    }
+
+    private IEnumerator StartGame()
+    {
+        startTime = Time.time;
+        yield return new WaitForSeconds(120);
+        isPlaying = false;
+        if(score > 40){
+            menu.transform.Find("Win").gameObject.SetActive(true);
+        }else{
+            menu.transform.Find("Lose").gameObject.SetActive(true);
+        }
+    }
+
+    public void OnSliderChanged(float value)
+    {
+        cameraLookPower = value;
     }
 
     private void Update()
     {   
+        scoreUI.text = "Score: " + score;
+        if(isPlaying) timerUI.text = "Time Left: " + (120-(int)(Time.time - startTime));
         if(!isPlaying){menu.SetActive(true);Cursor.lockState = CursorLockMode.None;return;}else menu.SetActive(false);
 
         deltaTime = Time.deltaTime;
@@ -93,7 +126,7 @@ public class CharacterMovement : MonoBehaviour
         bool isGrounded = characterController.isGrounded;
         skateAnimator.SetBool("Grounded", Time.time - lastGroundTime < 0.1f);
         if(isGrounded) lastGroundTime = Time.time;
-        if(_move.x != 0 && isGrounded) transform.Rotate(0, _move.x*rotationPower*4*Mathf.Sqrt(velocity.magnitude), 0);
+        if(_move.x != 0 && isGrounded) transform.Rotate(0, _move.x*rotationPower*4*Mathf.Sqrt(velocity.magnitude)*Time.timeScale*Time.timeScale, 0);
         if(_move.y  != 0){
             if(velocity.magnitude < movementSpeedCap) velocity += new Vector3(0,0,_move.y) * acceleration * deltaTime;
         }
@@ -155,7 +188,6 @@ public class CharacterMovement : MonoBehaviour
         float angle = Vector3.Angle(Vector3.up, groundNormal);
         if (angle < maxGroundAngle)
         {
-            Debug.Log(angle);
             Quaternion targetRotation = Quaternion.FromToRotation(transform.up, groundNormal) * transform.rotation;
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * deltaTime);
         }
