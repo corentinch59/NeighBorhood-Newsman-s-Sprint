@@ -3,7 +3,6 @@
 a simple game where you play a young skater who delivers newspapers on his way back home. The objective is to deliver 40 newspapers in two minutes. Please don’t mind the physics bugs 🙃 For perfs the web version has super low graphics quality
 
 [Game page with web player](https://ldjam.com/events/ludum-dare/53/neighborhood-newsmans-sprint)
-[Windows exe](Build/Build.zip)
 
 ![image](https://user-images.githubusercontent.com/49965312/235726651-3da3588e-0546-4350-b364-87bad62622f5.png)
 ![image](https://user-images.githubusercontent.com/49965312/235726874-e6dc89ff-d1c9-4158-8dbc-5fbaf05dc854.png)
